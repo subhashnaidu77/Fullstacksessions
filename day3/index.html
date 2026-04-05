@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> object  and array</h2>
+    <div id = "demo"></div>
+    <script>
+      
+      let student ={
+    name:"nitesh",
+    skills: ["html","css","js"]
+};
+
+let output ="";
+for(let key in student){  // this loop is for object 
+    if(Array.isArray(student[key])){ // condition checks that the value is array 
+        for(let i=0;i<student[key].length;i++){ // loop for array 
+            output +=  key + ": " + student[key][i]+ "<br>";
+            console.log(student[key][i]);
+        }
+    }else{ // if the condition fails it will just write the value of the key 
+          output +=  key + ":"+ student[key]+ "<br>";
+        console.log(student[key]);
+    }
+}
+document.getElementById("demo").innerHTML=output;
+    </script>
+</body>
+</html>
+
+
+// department as key and operations team and trainer and developer and tester 

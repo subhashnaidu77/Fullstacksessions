@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array of objects</h1>
+    <div id="demo1"></div>
+    <script>
+        let users = [
+{name:"dipu",age :20},
+{name: "shubham",age: 22},
+{name: "sameer",age: 22},
+{name: "nitesh",age: 22},
+
+];
+let output = "";
+for(let i in users){
+    output +=users[i].name + "<br>";
+console.log(users[i].name);
+} 
+
+document.getElementById("demo1").innerHTML = output;
+    </script>
+</body>
+</html>

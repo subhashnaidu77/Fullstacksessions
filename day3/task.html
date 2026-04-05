@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1> task </h1>
+<div id="demo"></div>
+<body>
+    <script>
+        let users = [{name:"dipu",age :20},
+{name: "shubham",age: 22},
+{name: "sameer",age: 22},
+{name: "nitesh",age: 22}];
+let out ="<tr><th>NAME</th> <th>AGE</th></tr> <br>";
+
+for(let i in users){
+    out += "<tr>";
+    out += "<td>" + users[i].name + "</td>";
+    out += "<td>" + users[i].age + "</td>" ;
+    out+="</tr>"+ "<br>";
+}
+document.getElementById("demo").innerHTML = out;
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>object </h2>
+    <p id="demo"></p>
+
+    <script>
+        let student= {
+            name: "dipu",
+            //key : value 
+            age: 25,
+            course: "MERN"
+        };
+      
+// update value 
+   student.age = 26;
+
+   // add a key value
+student.city = "moradabad"
+// deleting a key value 
+
+   delete student.age;
+   // to print only one value 
+   let key ="name";
+   document.getElementById("demo").innerHTML=student[key];
+ 
+
+   // to print entire data in string 
+        document.getElementById("demo").innerHTML=JSON.stringify(student);
+
+    // task : create an employee obj with name , age , salary , city , company ,
+    // print entire data of an employee in a string format 
+
+    
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>for in loop</h1>
+    <div id="demo1"></div>
+    <script>
+        let student= {
+            name: "dipu",
+            //key : value 
+            age: 25,
+            course: "MERN"
+        };
+     let output ="";
+     for(let key in student){
+        output += key + ":"+ student[key]+"<br>";
+     }
+     document.getElementById("demo1").innerHTML = output;
+      </script>
+</body>
+</html>
