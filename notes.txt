@@ -1,0 +1,264 @@
+=objects , arrays -- for in and for each loop and for of 
+
+object --- key , value the collection of data -  key value pairs 
+
+witout object --- 
+let name = "Sameer";
+let age = 25;
+let course = "mernstack"  // 3 var 
+
+4 students -- 4*3 = 12 var 
+
+let objvar ={
+key : value
+
+}
+
+// each key value pair will be separated with coma 
+let student = {
+name : "Sameer",
+age : 25 ,
+course : "mernstack"
+}
+student -> reference 
+
+
+html 
+1.head -> meta , rel, title 
+2.body -> p , h, table,..... 
+
+innerHTML , innerText 
+
+//object creation 
+// update a value 
+
+// add 
+
+// delete
+
+// stringify to convert object or arr into string 
+
+// for in loop 
+for (let var in object){
+//code
+}
+
+// object inside an object  -- nested object 
+if you have multiple values and keys to be stored inside a key then you have to go for object inside another bject 
+
+// ARRAY INSIDE OBJ  -- obj of array 
+
+//object inside array - array of objs
+
+let users = [{name:"dipu",age :20},
+{name: "shubham",age: 22},
+{name: "sameer",age: 22},
+{name: "nitesh",age: 22}];
+
+
+arrayname[index].keyname
+
+for(let i in users){
+console.log(users[i].name);
+} 
+<table>
+<th></th>
+<tr></tr>
+</table>
+
+
+
+------------------------------day 4------------
+
+
+
+for each loop : array 
+let arr = [10,20,30];
+arrayname.foreach(function(value,index){
+//code 
+});	
+
+passing a function as a parameter will be called as callback function
+
+break; // terminate the block of code 
+
+for(let i =0;i<5;i++){
+
+console.log("hi");
+}
+// 5 times hi 
+
+for(let i =0;i<5;i++){
+if(i===3) break;
+console.log("hi");
+}
+
+// output will be 3 times hi 
+
+arr.forEach(function(value,index){
+if(value ==20) break;
+console.log("hi");
+
+});
+
+
+for each             for in 
+
+arrays              objects
+values              keys -value
+break dont use     dont use break 
+
+
+
+api : application programming interface
+
+get , put , delete , post 
+
+signup -- post -- insert the data into database 
+
+view youraddress --- get -- it will fetch the data from your database
+
+updateyour address --put -- when we need to update the exisiting data 
+
+deltetheaddress -- delete -- it will delete entire data from database
+
+
+
+
+let products = [
+{name: "mobile" , price: 200},
+{name: "Laptop",price: 500}
+];
+
+products.forEach(function(item){
+console.log(item);
+});
+
+
+
+-----
+functions -- to reuse  the block of code any where 
+
+importants for functions 
+
+1. keyword
+2. function name 
+3. block of code
+4. function call
+
+1. normal function 
+2. function expression 
+3. arrow function 
+
+
+
+
+
+
+
+1.normal function : 
+
+function functioname(args){
+//block of code;
+}
+
+function hello()
+{
+console.log("hello students");
+}
+
+hello();
+in js when we call a function above it . it works 
+
+
+2. function expression : if we store a function inside a variable then it is called as a function expression 
+
+let hello = function (){
+console.log("hello students");
+}
+
+3. arrow function : it is the modern way of writing the normal function 
+
+
+let hello =()=>{
+console.log("hello students");
+}
+
+---------------------- day 5 ----
+
+
+return indicates itself 
+<p id="demo"></p>
+
+
+function add(a,b){
+return a+b;
+}
+function sub(a,b){
+return a-b;
+}
+
+document.getElementById("demo").innerHTML = "ADD" + add(20,30) +"SUB"+ sub(10,5);
+
+
+
+-------- 
+let user = {
+name : "Subhash",
+greet : function(){
+return "HELLO" + this.name;
+}
+};
+console.log(user.greet());
+
+where we have to use : 
+
+1.this refer values or properties inside an object 
+
+2.methods like class --- this  to access properties 
+
+3.even listeners : click , handlers , mouse events 
+
+where we should not use : 
+
+1. inside arrow functions 
+ex: let user = {
+name : "Subhash",
+greet : ()=>{
+return "HELLO" + this.name; // 
+}
+};
+
+2. call back functions 
+
+3. nested functions 
+
+ex:  let user = {
+name : "Subhash",
+greet(){
+function inner()
+{
+return "HELLO" + this.name; // }
+inner();
+};
+
+
+----------
+callback functions :
+usage : 1.to control your code dynamically (during run time )
+
+
+
+generally 1. synchronous (series/ sequential ) operations ----
+
+it wait to complete previous operations to perform next operations 
+
+2. asynchronous (same time multiple operations / parallel operations ) operations 
+
+
+
+
+
+
+
+
