@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="time">clock</h2>
+<script>
+function clock(){
+let currenttime =  new Date() // date method includes date , hours , minutes , years ,months , seconds , days ......etc 
+let hours = currenttime.getHours();
+let mins= currenttime.getMinutes();
+let secs = currenttime.getSeconds();
+let session = "AM";
+if(hours>=12){
+    session = "PM";
+}
+if(hours>12){
+    hours = hours - 12;
+}
+if(hours<10){
+    hours = "0"+hours;
+}
+if(mins<10){
+    mins = "0"+mins;
+}
+if(secs<10){
+    secs = "0"+secs;
+}
+document.getElementById("time").innerHTML = hours + ":"+mins +":"+ secs+":"+ session ;
+
+}
+
+
+setInterval(clock,1000);
+</script>
+
+    
+</body>
+</html>

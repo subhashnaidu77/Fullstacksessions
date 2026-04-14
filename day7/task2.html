@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> caclculator</h2>
+    <input type="text" id="result" readonly>
+<button onclick="displayvalue('1')">1</button>
+<button onclick="displayvalue('2')">2</button>
+<button onclick="displayvalue('3')">3</button>
+<button onclick="displayvalue('4')">4</button>
+<button onclick="displayvalue('5')">5</button>
+<button onclick="displayvalue('6')">6</button>
+<button onclick="displayvalue('7')">7</button>
+<button onclick="displayvalue('8')">8</button>
+<button onclick="displayvalue('9')">9</button>
+<button onclick="displayvalue('0')">0</button>
+<button onclick="displayvalue('+')">+</button>
+<button onclick="displayvalue('-')">-</button>
+<button onclick="displayvalue('*')">*</button>
+<button onclick="displayvalue('/')">/</button>
+<button onclick="calucalte()">=</button>
+<button onclick="clearDisplay()">AC</button>
+
+<script>
+    function displayvalue(value){
+document.getElementById("result").value += value;
+}
+
+function clearDisplay()
+{
+ document.getElementById("result").value = "";
+
+}
+function calucalte()
+{
+
+let res = document.getElementById("result").value;
+let finalres = eval(res);
+document.getElementById("result").value = finalres; 
+
+}
+</script>
+
+</body>
+</html>

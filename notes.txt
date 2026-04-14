@@ -254,11 +254,85 @@ generally 1. synchronous (series/ sequential ) operations ----
 it wait to complete previous operations to perform next operations 
 
 2. asynchronous (same time multiple operations / parallel operations ) operations 
+---------------day6 ------
+function greet(name,callback){
+console.log("hello"+name);
+callback();
+}
+
+function send(){
+console.log("how are you ");
+}
+greet("dipu",send);
+
+
+flow : step 1 : greet function call 
+step 2 :  hello dipu -> 
+step 3 : go to callback()-
+step 4 : how are you 
+///
+
+send is a function which is going to given as a parameter or passing through a another function 
+
+uses : 
+1. api calls 
+2.onclick events : ex: if we click a button 
+after it has to show a message 
+
+----------
+inline callback and arrow callback 
+
+
+settimeout --- after a certain time if we would like to run a function we can use settimeout
+
+
+setTimeout(function(){
+conosole.log("hello");
+},1000);
+
+
+setTimeout(()=>{
+console.log("hello");
+},3000);
+
+// applications of settimeout function 
+
+1. notification 
+2. api delays 
+3. loading screens 
+
+
+
+-------------------
+setInterval -- it will execute repeatedly within the time interval specified
+
+setInterval(()=>{
+console.log("ashwani");
+},2000);
+
+
+
+----------------------------
+Event based functions --event handling functions
+
+onclick , input , hoverevents ... etc 
+to handle user interaction-- dynamical 
+<h2> button click </h2>
+
+
+<button onclick= "message()" >click here</button>
+
+<script>
+
+function message()
+{
+document.getElementById("").innerHTML = "Nitesh";
+}
+</script>
 
 
 
 
-
-
+-------------------------text show nd hidden 
 
 
