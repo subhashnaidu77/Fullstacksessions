@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> Quiz</title>
+<style>
+.correct {
+border : 2px solid green;
+
+}
+.wrong{
+    border : 2px solid red;
+}
+
+</style>
+</head>
+<body>
+    
+<h2> Quiz </h2>
+<h3> Timer :<span id= "timer">5</span> </h3>
+<form id= "quizform">  </form>
+<button onclick= "submitQuiz()">submit<button>
+    <p id="result"></p>
+
+
+<script>
+let quiz = [
+{
+    question: "js stands for",
+    options: ["Java script","java","pyton","just"],
+    answer : "Java script"
+},
+{
+    question: "css stands for",
+    options: ["Java script","java","cascade style sheet","just"],
+    answer : "cascade style sheet"
+}
+];
+let form = document.getElementById("quizform"); // to render in the html page 
+quiz.forEach((q,index) => {
+    let html = `<p>${index +1}.${q.question}</p>`;
+    q.options.forEach(opt=>{
+        html+=`
+        <label>
+            <input type="radio" name="q${index}" value="${opt}">
+            ${opt}
+            </label><br>
+            `;
+    });
+    form.innerHTML += html;
+});
+
+let time =5;
+let timer = document.getElementById("timer");
+let interval = setInterval(() => {
+    time--;
+    timer.innerHTML = time;
+    if(time==0){
+        clearInterval(interval);
+        submitQuiz();
+    }
+
+}, 1000);
+
+
+function  submitQuiz() {
+       clearInterval(interval); // stop the timing 
+       let score = 0;
+       quiz.forEach((q,index)=>{
+       let options = document.getElementsByName("q"+index);
+        options.forEach(option=>{
+             let label = option.parentElement;
+        if(option.value=== q.answer){
+            label.classList.add("correct"); // i have choosen correct option 
+        }
+         if(option.checked && option.value !== q.answer){
+            label.classList.add("wrong"); // i have choosen wrong option 
+        }
+        if(option.checked && option.value === q.answer){
+            score++; // if i have choosen correct option  my score increases to 1 
+        }
+    });
+       });
+    //to display score i have got nd total marks 
+ document.getElementById("result").innerHTML = "Score:"+ score + "/" + quiz.length;
+}
+</script>
+
+
+</body>
+
+
+
+
+
+
+    </html>
