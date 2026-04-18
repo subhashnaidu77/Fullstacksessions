@@ -329,10 +329,60 @@ function message()
 document.getElementById("").innerHTML = "Nitesh";
 }
 </script>
+----------------------------------day 7 ------------------------------------
+
+homework: event handlers -- keyup , keydown , hover events ---
+---- methods 
+
+<h2 id="time">clock</h2>
+
+<script>
+function displayvalue(value){
+document.getElementById("result").innerHTML += value;
+} 
+
+
+function calucalte()
+{
+
+let res = document.getElementById("result").value;
+let finalres = eval(res);
+document.getElementById("result").value = finalres; 
+}
+
+
+function clearDisplay()
+{
+ document.getElementById("result").value = "";
+
+}</script>
 
 
 
 
--------------------------text show nd hidden 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

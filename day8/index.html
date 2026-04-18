@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> quiz</h2>
+<p id= "question">1.full form of HTML </p>
+
+<input type ="radio" name="q1" value ="1"> Hypertext mark up language <br>
+
+<input type ="radio" name="q1" value="2">  language <br>
+<input type ="radio" name="q1" value="3"> text mark up language <br>
+<input type ="radio" name="q1" value="4">  mark up language <br>
+<button onclick="checkthepaper()"> submit</button>
+<p id="result"></p>
+</body>
+<script>
+function checkthepaper(){
+let options = document.getElementsByName("q1");
+let choosen ="";
+for(let i=0;i<options.length;i++){
+if(options[i].checked){
+choosen += options[i].value;
+}
+}       
+
+
+if(choosen =="1"){
+document.getElementById("result").innerHTML ="Correct";
+}
+else{
+document.getElementById("result").innerHTML ="wrong";
+}
+}
+
+</script>
+
+</html>
