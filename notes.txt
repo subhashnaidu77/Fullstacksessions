@@ -356,11 +356,84 @@ function clearDisplay()
  document.getElementById("result").value = "";
 
 }</script>
+----------------day 8 
+
+create a quiz app 
+---  1. you should have questions and 4 options 
+---- 2. you should have a radio button for oprions and you should have a timer 
+
+3. timer should start from 5:00  mins to 0:00 
+4. if i click submit it should display correct answers in green border and wrong in red border 
+5. each correct question should have one mark and zero mark for wrong 
+
+// internal , external , inline 
+// selectors ,font , background ... 
+--- postioning , flex and grid
+
+---------day 9 ------
+internal , external , inline 
+grid indicates it is 2d lay out 
+
+
+<style> 
+.boxgrid{
+display:  grid;
+grid-template-columns : repeat(2,1fr);
+gap: 5px;
+}
+
+.box{
+background: red;
+
+}
+
+</style>
+
+
+------   
+1.static // default 
+2. relative --- moves to relatively to itself 
+. absolute --- // you have to use relative to use a absolute 
+
+here relative will be the parent and absolute will be the  child 
+
+3. fixed--- it will always stays at the position on the screen 
+
+4. sticky ---- until scroll it will stuck // it will stick to that position until we scroll 
+
+------
+1. implement accordion using bootstrap 
+2. add css to clock   task
+3.add cssto the calculator 
+4. create a resume using html and css 
+
+
+api -- get , post , delete, put
+to access the data , and to modify the data and delete the data and to update the data 
+
+always the data inside api will be in the json format 
+
+javascript object notation 
+
+1.
+{name : "Sameer",
+age: 20;
+
+}
+2.xml data 
+<student >
+<name>sameer</name>
+
+</student >
 
 
 
+stringify ---- 
+to access this we have method called fetch in js 
 
 
+
+fetch --
 
 
 
