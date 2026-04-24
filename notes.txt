@@ -434,6 +434,70 @@ to access this we have method called fetch in js
 
 
 fetch --
+--------------------day 10 ------------
+syntax: 
+fetch("url);
+
+<script>
+fetch("")
+.then(res=>res.json()).then(data =>{
+document.getElementById("demo").innerHTML = data[0].name;
+});
+</script>
+------
+api commonly used  : fetch api 	
+console api , weather ,history , mediaquery , storage api , forms api 
+
+fetch -> response -> json -<->data () 
+
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(function(response)){
+return respose.json();
+}).then(function(data){
+
+console.log(data);});
+
+.then()--> readability and one more is chaining
+
+
+------async and await ------
+<script>
+async function getUsers(){
+try{
+let res = awaitfetch("https://jsonplaceholder.typicode.com/users");
+let data = await res.json();
+document.getElementById("demo").innerHTML = data[0].name;
+}
+}catch(error){
+document.getElementById("demo").innerHTML = "somethin is wrong ";
+
+}
+
+}
+
+
+---------------------------
+
+function da()
+{
+fetch("https://jsonplaceholder.typicode.com/posts",{
+method: "POST",
+header:{
+
+"Content-Type" : "application/json"
+},
+body:JSON.stringify({
+title: "dipu",
+body: "hello",
+userid: 1
+
+})
+}).then(res=>res.json()).then(data=>console.log(data));
+}
+
+
+</script>
 
 
 
@@ -442,6 +506,7 @@ fetch --
 
 
 
+ 
 
 
 
