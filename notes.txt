@@ -215,7 +215,7 @@ where we have to use :
 
 1.this refer values or properties inside an object 
 
-2.methods like class --- this  to access properties 
+2.methods like class --- this  to access properties  constructor 
 
 3.even listeners : click , handlers , mouse events 
 
@@ -499,14 +499,108 @@ userid: 1
 
 </script>
 
+------------------------day 11 ---------------------------
+oops -- object oriented programming 
+
+a real world entity ---product or users data or students data 
+
+which represents as an object 
+
+method : 
+
+let studentslist = {
+name: "ashwani",
+class:
+......
+function inside a object is called as method 
+
+}
+
+let studentlist ={
+name: "ashwani",
+hello function(){
+console.log("hi ashwani");
+}
 
 
+};
+
+why oops are needed 
+
+without oops 
+
+let s1={
+name: "riya singh",age: "20"
+
+};
+let s2={
+name: "sameer",age: "20"
+
+};
+
+using oops we can create multiple objects . using a constructor 
+
+function Studentlist(name, age){
+this.name = name;
+this.age = age;
+}
+syntax : 
+let objna = new func(parameters);
+
+let s1 = new Studentlist("riya",20);
+let s2 = new Studentlist("Sameer",20);
+
+console.log(s1.name);
+
+----
+class --- modern version of constructor (blue print)
+
+class Student{
+constructor(name,age){
+this.name = name;
+this.age = age;
+}
+
+}
+
+let s1 = new Student("ashwani",25);
+console.log(s1.name);
 
 
+----------------------------
+
+feature    constructor    class 
+
+syntax     old 		 modern 
+readability fine 	high
+usage       both    both (prefer )
 
 
+-----inheritance and encapsulation ----
+1. inheritance --- we can aquire / use the properties of one class to another 
+//parent class
+class Parent{
+constructor(name){
+this.name= name;}
+session(){
+return "hello"+this.name;
+}
 
- 
+}
+
+//child class
+class Student extends Parent{
+constructor(name,course){
+super(name);//  to call the constructor of a parent class 
+this.course = course;
+
+}
+
+}
+let s1 = new Student("subhash" ,"MERN");
+console.log(s1.session());
+
+ task : override 
 
 
 
