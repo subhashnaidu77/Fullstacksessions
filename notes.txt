@@ -601,6 +601,99 @@ let s1 = new Student("subhash" ,"MERN");
 console.log(s1.session());
 
  task : override 
+--------------------------------day 12-----monogo db ----------------
+ db -> data base -- collection of data 
+2 types --  storing the data in table format  -- sql  
+--- storing the data in json format or collection -- NoSQL (mongo db)
+
+
+name    | roll | moboile|
+
+Subhash |21    |22323121|
+ashawani|21    |22323121|
+
+----in mongo db the data is not stored in tabl format json or collection
+
+{
+name: Subhash,
+age: 21,
+roll: 221
+}
+    
+----------------------
+if we have student table , teacher table , parents details table .... in sql 
+those tables will be called as collections in mongo db 
+
+-----
+in sql will call as row but the same thing will be called as document in mongo 
+
+-----
+each column in sql will be called as field in mongo 
+
+
+--------------
+database -> collection -> documents-> fileds 
+
+1. creating with inbuilt buttons in the compass 
+2. using shell
+3. using js or nodejscode 
+
+
+--------------------shell 
+to check the db's  -- show dbs 
+1.create a db ---use dbname
+2. create a collection ---- db.createCollection("students")
+
+if the response is {ok: 1}--- then it is successful 
+
+3. insert single document -- db.collectionname.insertOne({
+json data 
+
+})
+
+shift + enter -> to enter to new line 
+example db.students.insertOne({
+
+name: "subhash",
+age: 21
+
+})
+-----
+4. to check the data : db.students.find()
+
+5. insert many --- db.students.insertMany([{
+name:sameer,age:22,course: js},
+{name: "dipu",age:23,course: react},
+{name: "nitesh",age:25,course:node}
+
+])
+6. show the first document : db.students.findOne()
+
+--------filters 
+exact match : db.students.find({name:"sameer"})
+matching with multiple conditions : db.students.find({age : 22,course:"js"})
+--------------------comparision operators 
+greater than 
+db.students.find({age: {$gt:21}})
+
+less than 
+db.students.find({age: {$lt:21}})
+
+greater than or equal 
+db.students.find({age: {$gte:22}})
+
+
+less than or equal 
+db.students.find({age: {$lte:21}})
+---task perform insert , insert many comparison and logical and updateone and update many  the detail, delete ,  sorting , limit , count 
+
+
+
+
+
+
+
+
 
 
 
