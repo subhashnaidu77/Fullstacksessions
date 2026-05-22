@@ -687,11 +687,70 @@ less than or equal
 db.students.find({age: {$lte:21}})
 ---task perform insert , insert many comparison and logical and updateone and update many  the detail, delete ,  sorting , limit , count 
 
+---------------------- day 13 ------
+
+node js 
+to connect with you db 
+to create your api 's 
+serverside 
+
+what is server side rendering 
+what is client side rendering 
+react 
+
+flow  
+
+1.website (client side or UI(USER INTERFACE ))-> 2. NODEJS SERVER 
+
+-> 3. DATABASE 
+
+
+download 
+install it 
+check the version after installing using command --- node -v
 
 
 
+to run node files --- node filename.js
+----------------------
+
+modules : dividing our code into reusable parts 
+we have import it using keyword called require
+
+1. core modules
+2. custom modules 
+3. third-party modules 
 
 
+1.core modules ---   
+
+
+i. os module --- operating system module 
+
+different methods to use checking your system type - 
+win, Linux , Darwin 
+ii. http module :
+
+to create server using node we will use http module 
+
+const server = http.createServer((req,res)=>{
+res.write("http module");
+res.end();
+});
+
+server.listen((3000,()=>{
+console.log("server created and running at port 3000");
+});
+
+createServer method - creates the server 
+write give the o/p
+end () -> stopping point 
+
+port number 
+
+task :
+1. work on mongo db  
+2.explore the fs module and implement the different operations also try to explore different methods in os , http (only core module )
 
 
 
