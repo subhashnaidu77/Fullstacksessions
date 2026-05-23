@@ -752,8 +752,19 @@ task :
 1. work on mongo db  
 2.explore the fs module and implement the different operations also try to explore different methods in os , http (only core module )
 
+--------------------day14 ------
+task : 
+task for next session 
+1. dipu - resume using html , css  and also calculator 
 
+2. Sameer - static website  for restaunt whic contains 
+home , about, menu card , contact us 
 
+3.nitesh -- create a currency convertor 
+
+4. ashawani - create a calculator 
+5. riya singh - create  your resume using html,css and calculator  as well 
+please complete it before   the next session
 
 
 
