@@ -1,0 +1,783 @@
+=objects , arrays -- for in and for each loop and for of 
+
+object --- key , value the collection of data -  key value pairs 
+
+witout object --- 
+let name = "Sameer";
+let age = 25;
+let course = "mernstack"  // 3 var 
+
+4 students -- 4*3 = 12 var 
+
+let objvar ={
+key : value
+
+}
+
+// each key value pair will be separated with coma 
+let student = {
+name : "Sameer",
+age : 25 ,
+course : "mernstack"
+}
+student -> reference 
+
+
+html 
+1.head -> meta , rel, title 
+2.body -> p , h, table,..... 
+
+innerHTML , innerText 
+
+//object creation 
+// update a value 
+
+// add 
+
+// delete
+
+// stringify to convert object or arr into string 
+
+// for in loop 
+for (let var in object){
+//code
+}
+
+// object inside an object  -- nested object 
+if you have multiple values and keys to be stored inside a key then you have to go for object inside another bject 
+
+// ARRAY INSIDE OBJ  -- obj of array 
+
+//object inside array - array of objs
+
+let users = [{name:"dipu",age :20},
+{name: "shubham",age: 22},
+{name: "sameer",age: 22},
+{name: "nitesh",age: 22}];
+
+
+arrayname[index].keyname
+
+for(let i in users){
+console.log(users[i].name);
+} 
+<table>
+<th></th>
+<tr></tr>
+</table>
+
+
+
+------------------------------day 4------------
+
+
+
+for each loop : array 
+let arr = [10,20,30];
+arrayname.foreach(function(value,index){
+//code 
+});	
+
+passing a function as a parameter will be called as callback function
+
+break; // terminate the block of code 
+
+for(let i =0;i<5;i++){
+
+console.log("hi");
+}
+// 5 times hi 
+
+for(let i =0;i<5;i++){
+if(i===3) break;
+console.log("hi");
+}
+
+// output will be 3 times hi 
+
+arr.forEach(function(value,index){
+if(value ==20) break;
+console.log("hi");
+
+});
+
+
+for each             for in 
+
+arrays              objects
+values              keys -value
+break dont use     dont use break 
+
+
+
+api : application programming interface
+
+get , put , delete , post 
+
+signup -- post -- insert the data into database 
+
+view youraddress --- get -- it will fetch the data from your database
+
+updateyour address --put -- when we need to update the exisiting data 
+
+deltetheaddress -- delete -- it will delete entire data from database
+
+
+
+
+let products = [
+{name: "mobile" , price: 200},
+{name: "Laptop",price: 500}
+];
+
+products.forEach(function(item){
+console.log(item);
+});
+
+
+
+-----
+functions -- to reuse  the block of code any where 
+
+importants for functions 
+
+1. keyword
+2. function name 
+3. block of code
+4. function call
+
+1. normal function 
+2. function expression 
+3. arrow function 
+
+
+
+
+
+
+
+1.normal function : 
+
+function functioname(args){
+//block of code;
+}
+
+function hello()
+{
+console.log("hello students");
+}
+
+hello();
+in js when we call a function above it . it works 
+
+
+2. function expression : if we store a function inside a variable then it is called as a function expression 
+
+let hello = function (){
+console.log("hello students");
+}
+
+3. arrow function : it is the modern way of writing the normal function 
+
+
+let hello =()=>{
+console.log("hello students");
+}
+
+---------------------- day 5 ----
+
+
+return indicates itself 
+<p id="demo"></p>
+
+
+function add(a,b){
+return a+b;
+}
+function sub(a,b){
+return a-b;
+}
+
+document.getElementById("demo").innerHTML = "ADD" + add(20,30) +"SUB"+ sub(10,5);
+
+
+
+-------- 
+let user = {
+name : "Subhash",
+greet : function(){
+return "HELLO" + this.name;
+}
+};
+console.log(user.greet());
+
+where we have to use : 
+
+1.this refer values or properties inside an object 
+
+2.methods like class --- this  to access properties  constructor 
+
+3.even listeners : click , handlers , mouse events 
+
+where we should not use : 
+
+1. inside arrow functions 
+ex: let user = {
+name : "Subhash",
+greet : ()=>{
+return "HELLO" + this.name; // 
+}
+};
+
+2. call back functions 
+
+3. nested functions 
+
+ex:  let user = {
+name : "Subhash",
+greet(){
+function inner()
+{
+return "HELLO" + this.name; // }
+inner();
+};
+
+
+----------
+callback functions :
+usage : 1.to control your code dynamically (during run time )
+
+
+
+generally 1. synchronous (series/ sequential ) operations ----
+
+it wait to complete previous operations to perform next operations 
+
+2. asynchronous (same time multiple operations / parallel operations ) operations 
+---------------day6 ------
+function greet(name,callback){
+console.log("hello"+name);
+callback();
+}
+
+function send(){
+console.log("how are you ");
+}
+greet("dipu",send);
+
+
+flow : step 1 : greet function call 
+step 2 :  hello dipu -> 
+step 3 : go to callback()-
+step 4 : how are you 
+///
+
+send is a function which is going to given as a parameter or passing through a another function 
+
+uses : 
+1. api calls 
+2.onclick events : ex: if we click a button 
+after it has to show a message 
+
+----------
+inline callback and arrow callback 
+
+
+settimeout --- after a certain time if we would like to run a function we can use settimeout
+
+
+setTimeout(function(){
+conosole.log("hello");
+},1000);
+
+
+setTimeout(()=>{
+console.log("hello");
+},3000);
+
+// applications of settimeout function 
+
+1. notification 
+2. api delays 
+3. loading screens 
+
+
+
+-------------------
+setInterval -- it will execute repeatedly within the time interval specified
+
+setInterval(()=>{
+console.log("ashwani");
+},2000);
+
+
+
+----------------------------
+Event based functions --event handling functions
+
+onclick , input , hoverevents ... etc 
+to handle user interaction-- dynamical 
+<h2> button click </h2>
+
+
+<button onclick= "message()" >click here</button>
+
+<script>
+
+function message()
+{
+document.getElementById("").innerHTML = "Nitesh";
+}
+</script>
+----------------------------------day 7 ------------------------------------
+
+homework: event handlers -- keyup , keydown , hover events ---
+---- methods 
+
+<h2 id="time">clock</h2>
+
+<script>
+function displayvalue(value){
+document.getElementById("result").innerHTML += value;
+} 
+
+
+function calucalte()
+{
+
+let res = document.getElementById("result").value;
+let finalres = eval(res);
+document.getElementById("result").value = finalres; 
+}
+
+
+function clearDisplay()
+{
+ document.getElementById("result").value = "";
+
+}</script>
+----------------day 8 
+
+create a quiz app 
+---  1. you should have questions and 4 options 
+---- 2. you should have a radio button for oprions and you should have a timer 
+
+3. timer should start from 5:00  mins to 0:00 
+4. if i click submit it should display correct answers in green border and wrong in red border 
+5. each correct question should have one mark and zero mark for wrong 
+
+// internal , external , inline 
+// selectors ,font , background ... 
+--- postioning , flex and grid
+
+---------day 9 ------
+internal , external , inline 
+grid indicates it is 2d lay out 
+
+
+<style> 
+.boxgrid{
+display:  grid;
+grid-template-columns : repeat(2,1fr);
+gap: 5px;
+}
+
+.box{
+background: red;
+
+}
+
+</style>
+
+
+------   
+1.static // default 
+2. relative --- moves to relatively to itself 
+. absolute --- // you have to use relative to use a absolute 
+
+here relative will be the parent and absolute will be the  child 
+
+3. fixed--- it will always stays at the position on the screen 
+
+4. sticky ---- until scroll it will stuck // it will stick to that position until we scroll 
+
+------
+1. implement accordion using bootstrap 
+2. add css to clock   task
+3.add cssto the calculator 
+4. create a resume using html and css 
+
+
+api -- get , post , delete, put
+to access the data , and to modify the data and delete the data and to update the data 
+
+always the data inside api will be in the json format 
+
+javascript object notation 
+
+1.
+{name : "Sameer",
+age: 20;
+
+}
+2.xml data 
+<student >
+<name>sameer</name>
+
+</student >
+
+
+
+stringify ---- 
+to access this we have method called fetch in js 
+
+
+
+fetch --
+--------------------day 10 ------------
+syntax: 
+fetch("url);
+
+<script>
+fetch("")
+.then(res=>res.json()).then(data =>{
+document.getElementById("demo").innerHTML = data[0].name;
+});
+</script>
+------
+api commonly used  : fetch api 	
+console api , weather ,history , mediaquery , storage api , forms api 
+
+fetch -> response -> json -<->data () 
+
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(function(response)){
+return respose.json();
+}).then(function(data){
+
+console.log(data);});
+
+.then()--> readability and one more is chaining
+
+
+------async and await ------
+<script>
+async function getUsers(){
+try{
+let res = awaitfetch("https://jsonplaceholder.typicode.com/users");
+let data = await res.json();
+document.getElementById("demo").innerHTML = data[0].name;
+}
+}catch(error){
+document.getElementById("demo").innerHTML = "somethin is wrong ";
+
+}
+
+}
+
+
+---------------------------
+
+function da()
+{
+fetch("https://jsonplaceholder.typicode.com/posts",{
+method: "POST",
+header:{
+
+"Content-Type" : "application/json"
+},
+body:JSON.stringify({
+title: "dipu",
+body: "hello",
+userid: 1
+
+})
+}).then(res=>res.json()).then(data=>console.log(data));
+}
+
+
+</script>
+
+------------------------day 11 ---------------------------
+oops -- object oriented programming 
+
+a real world entity ---product or users data or students data 
+
+which represents as an object 
+
+method : 
+
+let studentslist = {
+name: "ashwani",
+class:
+......
+function inside a object is called as method 
+
+}
+
+let studentlist ={
+name: "ashwani",
+hello function(){
+console.log("hi ashwani");
+}
+
+
+};
+
+why oops are needed 
+
+without oops 
+
+let s1={
+name: "riya singh",age: "20"
+
+};
+let s2={
+name: "sameer",age: "20"
+
+};
+
+using oops we can create multiple objects . using a constructor 
+
+function Studentlist(name, age){
+this.name = name;
+this.age = age;
+}
+syntax : 
+let objna = new func(parameters);
+
+let s1 = new Studentlist("riya",20);
+let s2 = new Studentlist("Sameer",20);
+
+console.log(s1.name);
+
+----
+class --- modern version of constructor (blue print)
+
+class Student{
+constructor(name,age){
+this.name = name;
+this.age = age;
+}
+
+}
+
+let s1 = new Student("ashwani",25);
+console.log(s1.name);
+
+
+----------------------------
+
+feature    constructor    class 
+
+syntax     old 		 modern 
+readability fine 	high
+usage       both    both (prefer )
+
+
+-----inheritance and encapsulation ----
+1. inheritance --- we can aquire / use the properties of one class to another 
+//parent class
+class Parent{
+constructor(name){
+this.name= name;}
+session(){
+return "hello"+this.name;
+}
+
+}
+
+//child class
+class Student extends Parent{
+constructor(name,course){
+super(name);//  to call the constructor of a parent class 
+this.course = course;
+
+}
+
+}
+let s1 = new Student("subhash" ,"MERN");
+console.log(s1.session());
+
+ task : override 
+--------------------------------day 12-----monogo db ----------------
+ db -> data base -- collection of data 
+2 types --  storing the data in table format  -- sql  
+--- storing the data in json format or collection -- NoSQL (mongo db)
+
+
+name    | roll | moboile|
+
+Subhash |21    |22323121|
+ashawani|21    |22323121|
+
+----in mongo db the data is not stored in tabl format json or collection
+
+{
+name: Subhash,
+age: 21,
+roll: 221
+}
+    
+----------------------
+if we have student table , teacher table , parents details table .... in sql 
+those tables will be called as collections in mongo db 
+
+-----
+in sql will call as row but the same thing will be called as document in mongo 
+
+-----
+each column in sql will be called as field in mongo 
+
+
+--------------
+database -> collection -> documents-> fileds 
+
+1. creating with inbuilt buttons in the compass 
+2. using shell
+3. using js or nodejscode 
+
+
+--------------------shell 
+to check the db's  -- show dbs 
+1.create a db ---use dbname
+2. create a collection ---- db.createCollection("students")
+
+if the response is {ok: 1}--- then it is successful 
+
+3. insert single document -- db.collectionname.insertOne({
+json data 
+
+})
+
+shift + enter -> to enter to new line 
+example db.students.insertOne({
+
+name: "subhash",
+age: 21
+
+})
+-----
+4. to check the data : db.students.find()
+
+5. insert many --- db.students.insertMany([{
+name:sameer,age:22,course: js},
+{name: "dipu",age:23,course: react},
+{name: "nitesh",age:25,course:node}
+
+])
+6. show the first document : db.students.findOne()
+
+--------filters 
+exact match : db.students.find({name:"sameer"})
+matching with multiple conditions : db.students.find({age : 22,course:"js"})
+--------------------comparision operators 
+greater than 
+db.students.find({age: {$gt:21}})
+
+less than 
+db.students.find({age: {$lt:21}})
+
+greater than or equal 
+db.students.find({age: {$gte:22}})
+
+
+less than or equal 
+db.students.find({age: {$lte:21}})
+---task perform insert , insert many comparison and logical and updateone and update many  the detail, delete ,  sorting , limit , count 
+
+---------------------- day 13 ------
+
+node js 
+to connect with you db 
+to create your api 's 
+serverside 
+
+what is server side rendering 
+what is client side rendering 
+react 
+
+flow  
+
+1.website (client side or UI(USER INTERFACE ))-> 2. NODEJS SERVER 
+
+-> 3. DATABASE 
+
+
+download 
+install it 
+check the version after installing using command --- node -v
+
+
+
+to run node files --- node filename.js
+----------------------
+
+modules : dividing our code into reusable parts 
+we have import it using keyword called require
+
+1. core modules
+2. custom modules 
+3. third-party modules 
+
+
+1.core modules ---   
+
+
+i. os module --- operating system module 
+
+different methods to use checking your system type - 
+win, Linux , Darwin 
+ii. http module :
+
+to create server using node we will use http module 
+
+const server = http.createServer((req,res)=>{
+res.write("http module");
+res.end();
+});
+
+server.listen((3000,()=>{
+console.log("server created and running at port 3000");
+});
+
+createServer method - creates the server 
+write give the o/p
+end () -> stopping point 
+
+port number 
+
+task :
+1. work on mongo db  
+2.explore the fs module and implement the different operations also try to explore different methods in os , http (only core module )
+
+--------------------day14 ------
+task : 
+task for next session 
+1. dipu - resume using html , css  and also calculator 
+
+2. Sameer - static website  for restaunt whic contains 
+home , about, menu card , contact us 
+
+3.nitesh -- create a currency convertor 
+
+4. ashawani - create a calculator 
+5. riya singh - create  your resume using html,css and calculator  as well 
+please complete it before   the next session
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
