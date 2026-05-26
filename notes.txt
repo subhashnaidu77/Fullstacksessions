@@ -765,6 +765,42 @@ home , about, menu card , contact us
 4. ashawani - create a calculator 
 5. riya singh - create  your resume using html,css and calculator  as well 
 please complete it before   the next session
+------------------------day15 ------
+new repo -> give repo name -> description if you want -> create repo 
+
+1st way  uploading files 
+
+upload the file -> commit changes 
+
+to deploy static files (html,css ,js)
+1. settings -> click on pages -> choose a branch -> save -> click on code -> click on dot -> click on details -> select deploy option -> click on complete job -> click on the url 
+
+
+
+-----global objects 
+__dirname  : current folder path 
+__filename : current file name 
+console 
+setTimeout 
+------
+function add(a,b){
+return  a+b;
+}
+module.exports =add;
+
+call back , set timout and set interval and json.stringify 
+json.parse, path module 
+
+--------
+
+
+
+
+
+
+
+
+
 
 
 
