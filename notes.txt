@@ -791,7 +791,70 @@ module.exports =add;
 call back , set timout and set interval and json.stringify 
 json.parse, path module 
 
---------
+-------------------day 16 ----------------------------
+
+stream in node js 
+
+data into small chunks to process it 
+
+application is video streaming 
+
+
+types of streams 
+read , write , duplex , transform 
+
+1. read a stream 
+
+const fs = require('fs');
+const readStream = ('test.txt',"utf-8");
+
+readStream.on("data",(chunck)=>{
+console.log("CHUNK:",chunk );
+});
+
+-------------------------event emitter 
+
+application of custom events 
+
+login event 
+payment process 
+notifications 
+
+-----
+import and export 
+
+fs module , path module , stream , http ,os , 
+callback , settimeout and interval , stringify , parse 
+require -- import 
+
+commands 
+
+---------------------------------------express-----
+node (http )--- to create server it is very complex 
+if yu go express it is very easy and also api creation is also easier 
+y because express js it has built using node 
+
+advance of node 
+install the express and we can create the server and api 
+--------------------------------------------------------------
+create a folder -> npm init -y
+
+it will generate a package.json file which consist of dependencies 
+npm install express 
+
+npm -- node package manager 
+
+https://docs.npmjs.com/packages-and-modules
+
+
+
+
+
+
+
+
+
+
 
 
 
