@@ -846,6 +846,61 @@ npm -- node package manager
 
 https://docs.npmjs.com/packages-and-modules
 
+--------------------------------------------------------------------Day 17 
+
+multiple routes 
+
+
+---> api 
+--> different page 
+
+
+https://localhost/3000-> home page 
+https://localhost/3000/about -> about page 
+https://localhost/3000/contact -> contact page 
+
+
+
+/ , /about ,/contact  ---
+
+
+------- query parameters and route parameters 
+
+
+
+route parameters 
+---- or passing params ---
+
+http://localhos/user/:id
+
+
+
+
+task : explore on query parameters 
+http://localhost:3000/search?q=node
+
+try to build routes  
+
+home page 
+contact page 
+about page 
+search -- query parameters 
+user id -- routing parameters 
+
+implement or create post method --- hint  you have to use body parse to implement post 
+
+
+---day 18 --- 
+
+
+
+
+
+
+
+
+
+
 
 
 
