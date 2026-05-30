@@ -892,46 +892,65 @@ implement or create post method --- hint  you have to use body parse to implemen
 
 ---day 18 --- 
 
+to build complete backend 
+mongodb - create api for crud operations 
+
+project structures --- folder structure ---to design your folders in a proper order 
+
+all the mongo db files should be in one place or one folder--- models  
+
+all the routes -- one folder  --- routes
+
+server.js 
+
+
+module.exports = mongoose.model("User",userSchema);
 
 
 
 
+crud operation - create , read , update and delete 
+post , put , delete , get 
+// create - a new user we have to insrt the data 
+req - takes request from user 
+res - gives response to the user 
+
+
+router.post("/",async(req,res)=>{
+const user= new User(req.body) 
+await user.save();
+res.send("your details stored successfully")
+});
 
 
 
 
+name - sameer 
+age - 3
+email -
+submit --
+
+update and delete 
+
+router.delete("/:id",async(req,res)=>{
+await User.findByIdAndDelete(req.params.id);
+res.send("your details has deleted ");
+});
+
+
+{
+name : riya ,
+age: 25,
+email: riya225@gmail.com
+}
 
 
 
+db connection 
 
 
+mongoose.connect("url").then(()=>console.log("DB is connected"))
+.catch(err=>console.log(err));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+app.js or server.js-> if we perfom any connection -> routes --> perform the task from the mongo db 
