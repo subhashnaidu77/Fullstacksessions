@@ -14,3 +14,5 @@ app.use("/users",userRoutes);
 app.listen(9000,()=>{
     console.log("server is running on port 9000");
 });
+
+// http://localhost:9000/users

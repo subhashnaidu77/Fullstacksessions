@@ -7,7 +7,7 @@ const User = require('../models/User');
 router.post("/",async(req,res)=>{
 const user= new User(req.body) 
 await user.save();
-res.send("your details stored successfully")
+res.send("your credentials stored successfully")
 });
 
 // read all users

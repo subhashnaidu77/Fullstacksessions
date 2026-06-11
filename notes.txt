@@ -954,3 +954,38 @@ mongoose.connect("url").then(()=>console.log("DB is connected"))
 
 
 app.js or server.js-> if we perfom any connection -> routes --> perform the task from the mongo db 
+
+post, get and delete and put 
+
+------------------------------day 19 -- 
+
+http://localhost:9000/users
+
+
+to check api is working we have to postman application , thunder also one more 
+
+1. we can find the error message 
+2. we can know the flow of the project 
+
+
+
+nodemon --- it will  automatically starts server 
+
+https://docs.npmjs.com/
+
+
+bcrypt 
+
+paswrd hashing 
+name : "riya"
+password: "#@st@####8w36"
+
+
+
+
+
+
+
+
+
+
