@@ -980,6 +980,59 @@ paswrd hashing
 name : "riya"
 password: "#@st@####8w36"
 
+--------------------------------------------day 20 ------------------------
+React --ui -- js library  react is used to buil ui which is a js library -- facebook 
+---
+dynamic pages , reusable components - 
+why react than js 
+1.DOM  manipulation in js is complex when compared react 
+2.to build applications js is typical 
+3. reusable components is the advantage 
+4. page reloading -- single page application - (SPA)-- ex : youtube , Instagram , fb , gmail 
+
+
+---------2 ways of creating applications
+1. cra - npx create-react-app myapp
+2. vite -- npm create vite@latest myapp--- react and js 
+
+
+
+---------------
+react is a component based architecture
+
+1. class components till 16.8 version of react 
+
+code is more  complexity readability is less 
+
+
+2. after 16.8 they have implemented -- functional component
+
+
+
+----------
+to re run my project or react application i have to give 
+
+cd appname
+npm run dev 
+
+app.jsx is the main folder to render all the changes in the application 
+
+in the main.jsx we have app component  so it will be like the root for our application  hence it will be the main page 
+
+render the ui from app.jsx 
+
+
+
+Development server -- locally 
+
+production server --- deployed link -- real world link or server 
+
+<> </>
+ 
+
+
+
+
 
 
 
