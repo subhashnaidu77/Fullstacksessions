@@ -1027,18 +1027,39 @@ Development server -- locally
 
 production server --- deployed link -- real world link or server 
 
-<> </>
+<> </> --- empty fragments 
+
  
+-------------------------------------------------------------Day 21 ---------------------
 
 
+function name(){
+return (
+
+    <>
+    
+    </>
+)
+
+}
+---the entire is a combination of html and js -- jsx 
+
+root -app.jsx -> myfirstcomponent -> mysecondcomponent 
+
+syntax 
+<tagname style={{}}>matter </tagname>
 
 
+comments --- <!--!>
+
+{/* this comment in react *}
+
+<img src="" />
+
+class name -- <tagname className>content </tagname>
+<button onClick = "">
 
 
-
-
-
-
-
+go through the rules or syntax  rules for all the tags of react 
 
 
