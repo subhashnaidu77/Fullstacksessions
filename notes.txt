@@ -1061,5 +1061,34 @@ class name -- <tagname className>content </tagname>
 
 
 go through the rules or syntax  rules for all the tags of react 
+-----------------------------------day 22 --------------------------
+
+class Componentname extends Component (){
+render(){
+return(
+
+<>
+
+/// our code 
+
+</>
+
+)
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
