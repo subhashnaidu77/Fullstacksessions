@@ -1062,6 +1062,8 @@ class name -- <tagname className>content </tagname>
 
 go through the rules or syntax  rules for all the tags of react 
 -----------------------------------day 22 --------------------------
+import Component from 'react';
+
 
 class Componentname extends Component (){
 render(){
@@ -1079,16 +1081,77 @@ return(
 
 
 }
+---------------------------- PROPS ------
+
+parent  to child communication 
+
+implement the props using class and functional components -> with arrays (map method)
+objects , functions 
+
+state --> 
+
+-----------------------------------------day23-------------------------
+jsx , functional comppnents 
 
 
 
 
 
+button click -> increment -> setcount(c+1)-> state chaneg -> rendering -> ui update 
+
+
+button default- not login to site --- please login 
+
+if i click the button --- i have logged in to the website -- welcome 
+
+again if i click the button --- i have logeed out --- please login 
 
 
 
+-------------------------------------------day 24 -------------------------------
+
+functional compo -- useState()
+
+in class --- state-> this.state to update the state we have to wirte  as this.setState
+
+
+to implement state we need a constructor -- super()-> 
+
+
+to initialize i need this.state 
+
+to change the value i need this.setState 
+
+
+class component --- functional component--
 
 
 
+-----event handling 
 
+in javascript onclick , on submit , on abort , on change on mouse over---
+
+in react we have to write in camel case ---
+in react - > onClick , onSubmit,  onChange ,  
+
+
+onclick - buttons 
+-----onsubmit ---forms
+
+if we submit the form it will reload the page 
+
+to over come the page reloading we have to use prevent default method 
+
+------onchange --mostly used with input fields
+
+create a portfolio using html css,js or using react 
+
+Create a registration form where it should have on submit  after submitting the form the details should be appear in the ui 
+the form should contain atleast 8 input fields 
+
+
+work on the event handlers like onkey down , on Abort , onMouseOver 
+
+
+ 
 

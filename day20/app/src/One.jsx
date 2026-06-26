@@ -1,12 +1,12 @@
-
-
-function One({isKite}){
+function One({skills}){
     return(
-        <>
-        <h1>{isKite ? "yes":"no"}        </h1>
-        
-        </>
-    )
-}
+<>
+<ul>
+{skills.map((skill,index)=>(
+    <li key={index}>{skill}</li>))}
 
+
+</ul>
+</>
+)}
 export default One;
