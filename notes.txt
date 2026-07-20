@@ -1153,5 +1153,69 @@ the form should contain atleast 8 input fields
 work on the event handlers like onkey down , on Abort , onMouseOver 
 
 
+ ----------------------------------------day 25 ------------------------------
+use Effect () -- hook 
+api , databse fethcing 
+timers -
+in class we have life cycle methods --- 
  
+mount  - componnetndi mount ()
+
+updae compnent should update ()
+unmount - componnetndi unmount() 
+
+
+functional we have hook -- useeffect ()----
+useEffect(()=>{
+  console.log("hello");
+});
+
+it will display the output when ever i render on ui 
+
+array dependecy ----
+useEffect(()=>{
+  console.log("hello");
+},[]);
+
+when we use array dependecy it will execute only for th first render 
+-----
+task is implement an api call using useEffect
+add a fetch method inside the api and prnt the dat a inside the api 
+https://dummyjson.com/products
+
+print the title of each produt using useEffect
+------------------- day  26-------------------
+
+user ref will store the value and render on the ui but it wont rerender like use state 
+
+useMemo ()-> it will store the value for the future requireent 
+and if we have any calucaltion part in futurer it will use that result 
+
+5+5 =10
+5+5 = 10;
+useMemo -> i dont need to implemnt the functionalithy again 
+useMemo hook will remember the value and it will do the caluclation 
+
+
+task -- useMemo()
+
+
+import { useRef, useState } from "react";
+
+function Nine(){
+const box = useRef(null);
+const [boxed , setBoxed] = useState("");
+const updatingthetext=()=>{
+    setBoxed(box.current.value)
+}
+
+
+return (<>
+<input onChange={updatingthetext}></input>
+</>)
+
+}
+export default Nine;
+ 
+------------------day 28 ------------------------
 
