@@ -17,7 +17,7 @@ function Home(){
     }
     return (<>
 
-<h1>user form </h1>
+<h1>User Form </h1>
 <input type="text" placeholder="enter your name"
 value={name}
 onChange={(e)=>setName(e.target.value)}

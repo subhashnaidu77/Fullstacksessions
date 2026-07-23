@@ -1219,3 +1219,18 @@ export default Nine;
  
 ------------------day 28 ------------------------
 
+create a backend and frontend products adding task which should contain all the details of products like 
+product name 
+price 
+image 
+description 
+discount 
+rating 
+
+to get the products data 
+and to post the products data 
+
+-------------------------day 29 -----------------------------------------
+npm install express mongoose bcrypt jsonwebtoken dotenv cors
+cors -- cross origin resource sharing 
+this one will communicate with the frontend 
